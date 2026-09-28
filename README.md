@@ -227,71 +227,82 @@ Feature	Description
 
 🏗️ Architecture
 
-┌───────────────────────────────┐
-│         Streamlit UI          │
-│                               │
-│  • New Incident               │
-│  • AI Analysis                │
-│  • Historical Memory          │
-│  • Resolution Capture         │
-│  • Operational Insights      │
-└───────────────┬───────────────┘
-                │
-                ▼
-┌───────────────────────────────┐
-│          FastAPI API          │
-│                               │
-│  POST /triage                 │
-│  POST /resolve                │
-│  GET  /insights               │
-└───────────────┬───────────────┘
-                │
-                ▼
-┌───────────────────────────────┐
-│       IncidentMind Agent      │
-│                               │
-│  Recall → Reason → Recommend  │
-│              ↓                │
-│            Retain             │
-└───────────────┬───────────────┘
-                │
-        ┌───────┴────────┐
-        ▼                ▼
-┌──────────────┐  ┌──────────────┐
-│   Hindsight  │  │   Groq LLM   │
-│    Memory    │  │   Reasoning  │
-└──────────────┘  └──────────────┘
+IncidentMind consists of five main layers:
+
+1. Streamlit Interface
+
+Provides the user interface for submitting incidents, viewing AI analysis, reviewing historical memories, recording resolutions, and generating operational insights.
+
+2. FastAPI Backend
+
+Handles communication between the frontend and the IncidentMind agent through REST API endpoints.
+
+3. IncidentMind Agent
+
+Coordinates the incident-response workflow by:
+
+* Receiving a new production alert
+* Recalling relevant historical incidents
+* Providing historical evidence to the LLM
+* Generating an incident analysis
+* Recording the final resolution
+
+4. Hindsight Memory
+
+Provides persistent operational memory through:
+
+* Retain — stores incidents, resolutions, and lessons
+* Recall — retrieves relevant historical incidents
+* Reflect — identifies recurring patterns and insights
+
+5. Groq LLM
+
+Analyzes the new alert together with historical evidence and generates a structured response for the engineer.
+
+Incident Response Flow
+
+New Alert → Historical Recall → AI Analysis → Engineer Verification → Resolution → Memory Retention
 
 ⸻
 
 📁 Project Structure
 
-IncidentMind/
-│
-├── app/
-│   ├── __init__.py
-│   ├── agent.py
-│   ├── config.py
-│   ├── llm.py
-│   ├── main.py
-│   └── memory.py
-│
-├── data/
-│   └── incidents.json
-│
-├── scripts/
-│   ├── generate_incidents.py
-│   └── seed_incidents.py
-│
-├── ui/
-│   └── app.py
-│
-├── .env.example
-├── .gitignore
-├── README.md
-└── requirements.txt
+app/
 
-⸻
+Contains the core IncidentMind application.
+
+* agent.py — Incident triage and resolution workflow
+* config.py — Application configuration and environment variables
+* llm.py — Groq LLM integration
+* main.py — FastAPI application and API endpoints
+* memory.py — Hindsight memory operations
+* __init__.py — Python package initializer
+
+data/
+
+Contains the historical incident dataset.
+
+* incidents.json — Synthetic production incident records
+
+scripts/
+
+Contains project setup and dataset utilities.
+
+* seed_incidents.py — Loads historical incidents into Hindsight
+* generate_incidents.py — Validates the incident dataset
+
+ui/
+
+Contains the Streamlit frontend.
+
+* app.py — IncidentMind user interface
+
+Root Configuration Files
+
+* .env.example — Environment-variable template
+* .gitignore — Prevents secrets and unnecessary files from being committed
+* requirements.txt — Python dependencies
+* README.md — Project documentation
 
 🛠️ Tech Stack
 

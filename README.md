@@ -1,4 +1,4 @@
-🧠 IncidentMind
+ IncidentMind
 
 AI-Powered On-Call Incident Response Agent That Remembers Every Outage
 
@@ -14,7 +14,7 @@ Every incident becomes knowledge for the next one.
 
 ⸻
 
-📸 Demo Preview
+ Demo Preview
 
 Screenshots below will be added after the application is tested.
 
@@ -26,7 +26,7 @@ Operational Insights
 
 ⸻
 
-🚨 Problem
+Problem
 
 When a production incident occurs, engineers often have to investigate from scratch.
 
@@ -44,7 +44,7 @@ A generic AI assistant can provide troubleshooting suggestions, but it usually d
 
 ⸻
 
-💡 Solution
+ Solution
 
 IncidentMind gives an AI incident-response agent persistent memory.
 
@@ -76,7 +76,7 @@ When a new alert arrives, IncidentMind can:
 
 ⸻
 
-🧠 Core Concept
+ Core Concept
 
 Traditional incident response often looks like:
 
@@ -98,7 +98,7 @@ Remember Better
 
 ⸻
 
-🔄 How IncidentMind Works
+How IncidentMind Works
 
                  NEW PRODUCTION ALERT
                          │
@@ -151,7 +151,7 @@ Remember Better
 
 ⸻
 
-🧠 Hindsight-Powered Memory
+ Hindsight-Powered Memory
 
 IncidentMind uses Hindsight as its persistent memory layer.
 
@@ -186,7 +186,7 @@ Identifies higher-level patterns across the team’s incident history.
 
 ⸻
 
-⚠️ Remembering Failed Fixes
+ Remembering Failed Fixes
 
 One of IncidentMind’s important concepts is that failed approaches are also valuable knowledge.
 
@@ -209,23 +209,23 @@ When a similar incident occurs, IncidentMind can use this historical evidence to
 
 ⸻
 
-✨ Key Features
+ Key Features
 
 Feature	Description
-🚨 Incident Triage	Analyze new production alerts
-🧠 Persistent Memory	Remember previous incidents
-🔎 Historical Recall	Find relevant similar incidents
-⚠️ Failed-Fix Memory	Remember unsuccessful approaches
-✅ Resolution Capture	Store incident outcomes
-📚 Lessons Learned	Preserve operational knowledge
-📊 Operational Insights	Identify recurring patterns
-🤖 AI Reasoning	Generate structured incident analysis
-🔄 Continuous Learning	Add new outcomes to future memory
-🔐 Memory Isolation	Support separate team/service memory banks
+-> Incident Triage	Analyze new production alerts
+-> Persistent Memory	Remember previous incidents
+-> Historical Recall	Find relevant similar incidents
+-> Failed-Fix Memory	Remember unsuccessful approaches
+-> Resolution Capture	Store incident outcomes
+-> Lessons Learned	Preserve operational knowledge
+-> Operational Insights	Identify recurring patterns
+-> AI Reasoning	Generate structured incident analysis
+-> Continuous Learning	Add new outcomes to future memory
+-> Memory Isolation	Support separate team/service memory banks
 
 ⸻
 
-🏗️ Architecture
+ Architecture
 
 IncidentMind consists of five main layers:
 
@@ -265,7 +265,7 @@ New Alert → Historical Recall → AI Analysis → Engineer Verification → Re
 
 ⸻
 
-📁 Project Structure
+Project Structure
 
 app/
 
@@ -304,7 +304,7 @@ Root Configuration Files
 * requirements.txt — Python dependencies
 * README.md — Project documentation
 
-🛠️ Tech Stack
+Tech Stack
 
 Backend
 
@@ -335,7 +335,7 @@ Data
 
 ⸻
 
-📊 Incident Dataset
+ Incident Dataset
 
 IncidentMind includes a synthetic incident dataset containing 30 realistic production-style incidents.
 
@@ -363,7 +363,7 @@ The data is synthetic and intended for hackathon demonstration purposes.
 
 ⸻
 
-🎯 Example
+ Example
 
 Suppose a new alert arrives:
 
@@ -394,7 +394,7 @@ It can use the team’s own operational history.
 
 ⸻
 
-🔄 Continuous Learning Loop
+Continuous Learning Loop
 
        New Production Incident
                   │
@@ -420,7 +420,7 @@ Each resolved incident can therefore contribute to the system’s future knowled
 
 ⸻
 
-📊 Operational Insights
+ Operational Insights
 
 IncidentMind can use reflection over stored incidents to identify patterns such as:
 
@@ -434,7 +434,7 @@ This allows individual incident memories to become higher-level operational know
 
 ⸻
 
-⚙️ Setup
+Setup
 
 1. Clone the repository
 
@@ -472,7 +472,7 @@ Never commit your real API keys or .env file to GitHub.
 
 ⸻
 
-🌱 Seed Historical Memory
+Seed Historical Memory
 
 Run:
 
@@ -482,7 +482,7 @@ This loads the historical incident dataset into the configured Hindsight memory 
 
 ⸻
 
-▶️ Run the Backend
+ Run the Backend
 
 From the project root:
 
@@ -492,7 +492,7 @@ The FastAPI backend will start locally.
 
 ⸻
 
-🖥️ Run the Frontend
+Run the Frontend
 
 Open another terminal while the backend is running:
 
@@ -502,7 +502,7 @@ The IncidentMind interface will open in your browser.
 
 ⸻
 
-🔌 API Endpoints
+API Endpoints
 
 GET /
 
@@ -547,7 +547,7 @@ Generates higher-level operational insights from stored incident memory.
 
 ⸻
 
-🧪 Demo Flow
+ Demo Flow
 
 1. Start the FastAPI backend
              ↓
@@ -569,7 +569,7 @@ Generates higher-level operational insights from stored incident memory.
 
 ⸻
 
-🔐 Human Verification
+ Human Verification
 
 IncidentMind is designed as an engineering decision-support system.
 
@@ -584,7 +584,7 @@ IncidentMind is specifically designed not to invent historical evidence and to d
 
 ⸻
 
-🚀 Future Roadmap
+ Future Roadmap
 
 PagerDuty Integration
 
@@ -608,7 +608,7 @@ Track incident trends, recurring services, resolution times, and failure pattern
 
 ⸻
 
-🏆 Hackathon Concept
+Hackathon Concept
 
 IncidentMind demonstrates how an AI agent can combine:
 
@@ -626,7 +626,7 @@ The result is an incident-response system designed to learn from operational his
 
 ⸻
 
-👥 Project
+ Project
 
 Project: IncidentMind
 
@@ -636,7 +636,7 @@ Event: HackwithHyderabad 3.0
 
 ⸻
 
-⚠️ Disclaimer
+ Disclaimer
 
 IncidentMind is a hackathon prototype using synthetic incident data.
 
@@ -644,7 +644,7 @@ It demonstrates persistent-memory-based AI incident response and should not be t
 
 ⸻
 
-💭 The Vision
+The Vision
 
 Every incident becomes knowledge for the next one.
 

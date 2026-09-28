@@ -10,7 +10,11 @@ from app.config import (
 )
 
 
-DATA_FILE = Path(__file__).resolve().parent.parent / "data" / "incidents.json"
+DATA_FILE = (
+    Path(__file__).resolve().parent.parent
+    / "data"
+    / "incidents.json"
+)
 
 
 def get_client():
@@ -33,7 +37,9 @@ def seed_incidents():
                 "successful fixes, failed fixes, and operational lessons."
             ),
         )
+
         print(f"Created memory bank: {BANK_ID}")
+
     except Exception:
         print(f"Using existing memory bank: {BANK_ID}")
 
@@ -41,26 +47,33 @@ def seed_incidents():
         incidents = json.load(file)
 
     for incident in incidents:
+
         content = f"""
 Incident ID: {incident.get("id")}
-Service: {incident.get("service")}
-Severity: {incident.get("severity")}
-Timestamp: {incident.get("timestamp")}
 
-Alert:
-{incident.get("alert")}
+Service:
+{incident.get("service")}
+
+Severity:
+{incident.get("severity")}
+
+Symptoms:
+{incident.get("symptoms")}
 
 Root Cause:
 {incident.get("root_cause")}
 
-Fix Applied:
-{incident.get("fix")}
+Fix Attempted:
+{incident.get("fix_attempted")}
 
-Outcome:
-{incident.get("outcome")}
+Fix Result:
+{incident.get("fix_result")}
 
-Lesson:
-{incident.get("lesson")}
+Resolution:
+{incident.get("resolution")}
+
+Lessons Learned:
+{incident.get("lessons_learned")}
 """
 
         metadata = {
@@ -68,7 +81,6 @@ Lesson:
             "incident_id": incident.get("id"),
             "service": incident.get("service"),
             "severity": incident.get("severity"),
-            "outcome": incident.get("outcome"),
         }
 
         client.retain(

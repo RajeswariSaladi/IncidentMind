@@ -480,7 +480,6 @@ python scripts/seed_incidents.py
 
 This loads the historical incident dataset into the configured Hindsight memory bank.
 
-⸻
 
  Run the Backend
 

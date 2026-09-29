@@ -12,7 +12,7 @@ The goal is simple:
 
 Every incident becomes knowledge for the next one.
 
-⸻
+
 
  Demo Preview
 
@@ -24,7 +24,7 @@ Historical Memory
 
 Operational Insights
 
-⸻
+
 
 Problem
 
@@ -42,7 +42,7 @@ This leads to repeated investigation and loss of operational knowledge.
 
 A generic AI assistant can provide troubleshooting suggestions, but it usually does not know what happened previously inside a particular engineering team or service.
 
-⸻
+
 
  Solution
 
@@ -74,7 +74,7 @@ When a new alert arrives, IncidentMind can:
 6. Store the new incident outcome
 7. Reflect across incidents to identify recurring patterns
 
-⸻
+
 
  Core Concept
 
@@ -96,7 +96,7 @@ Learn
   ↓
 Remember Better
 
-⸻
+
 
 How IncidentMind Works
 
@@ -149,7 +149,7 @@ How IncidentMind Works
                          ▼
                   FUTURE MEMORY
 
-⸻
+
 
  Hindsight-Powered Memory
 
@@ -184,7 +184,7 @@ Identifies higher-level patterns across the team’s incident history.
         Store         Retrieve      Discover
         Memory        Evidence      Patterns
 
-⸻
+
 
  Remembering Failed Fixes
 
@@ -207,7 +207,7 @@ and reduced connection leakage
 
 When a similar incident occurs, IncidentMind can use this historical evidence to help engineers avoid repeating an unsuccessful approach.
 
-⸻
+
 
  Key Features
 
@@ -223,7 +223,7 @@ Feature	Description
 -> Continuous Learning	Add new outcomes to future memory
 -> Memory Isolation	Support separate team/service memory banks
 
-⸻
+
 
  Architecture
 
@@ -263,7 +263,7 @@ Incident Response Flow
 
 New Alert → Historical Recall → AI Analysis → Engineer Verification → Resolution → Memory Retention
 
-⸻
+
 
 Project Structure
 
@@ -333,7 +333,7 @@ Data
 
 * JSON-based synthetic incident dataset
 
-⸻
+
 
  Incident Dataset
 
@@ -361,7 +361,7 @@ The dataset is designed to demonstrate:
 
 The data is synthetic and intended for hackathon demonstration purposes.
 
-⸻
+
 
  Example
 
@@ -392,7 +392,7 @@ The key difference is that the agent is not relying only on generic troubleshoot
 
 It can use the team’s own operational history.
 
-⸻
+
 
 Continuous Learning Loop
 
@@ -418,7 +418,7 @@ Continuous Learning Loop
 
 Each resolved incident can therefore contribute to the system’s future knowledge.
 
-⸻
+
 
  Operational Insights
 
@@ -432,7 +432,7 @@ IncidentMind can use reflection over stored incidents to identify patterns such 
 
 This allows individual incident memories to become higher-level operational knowledge.
 
-⸻
+
 
 Setup
 
@@ -470,7 +470,7 @@ BANK_ID=incidentmind-team
 
 Never commit your real API keys or .env file to GitHub.
 
-⸻
+
 
 Seed Historical Memory
 
@@ -490,7 +490,7 @@ uvicorn app.main:app --reload
 
 The FastAPI backend will start locally.
 
-⸻
+
 
 Run the Frontend
 
@@ -500,7 +500,7 @@ streamlit run ui/app.py
 
 The IncidentMind interface will open in your browser.
 
-⸻
+
 
 API Endpoints
 
@@ -508,7 +508,7 @@ GET /
 
 Returns basic IncidentMind application information.
 
-⸻
+
 
 POST /triage
 
@@ -521,7 +521,7 @@ Example:
   "use_memory": true
 }
 
-⸻
+
 
 POST /resolve
 
@@ -539,13 +539,13 @@ Example:
   "lesson": "Monitor connection pool usage during traffic spikes."
 }
 
-⸻
+
 
 GET /insights
 
 Generates higher-level operational insights from stored incident memory.
 
-⸻
+
 
  Demo Flow
 
@@ -567,7 +567,7 @@ Generates higher-level operational insights from stored incident memory.
              ↓
 9. Future incidents can use the new knowledge
 
-⸻
+
 
  Human Verification
 
@@ -582,7 +582,7 @@ AI-generated recommendations should be:
 
 IncidentMind is specifically designed not to invent historical evidence and to distinguish historical information from AI reasoning.
 
-⸻
+
 
  Future Roadmap
 
@@ -606,7 +606,7 @@ Expanded Operational Analytics
 
 Track incident trends, recurring services, resolution times, and failure patterns.
 
-⸻
+
 
 Hackathon Concept
 
@@ -624,7 +624,7 @@ Reflection
 
 The result is an incident-response system designed to learn from operational history rather than starting from zero every time.
 
-⸻
+
 
  Project
 
@@ -634,7 +634,7 @@ Theme: AI Agents That Learn Using Hindsight
 
 Event: HackwithHyderabad 3.0
 
-⸻
+
 
  Disclaimer
 
@@ -642,7 +642,7 @@ IncidentMind is a hackathon prototype using synthetic incident data.
 
 It demonstrates persistent-memory-based AI incident response and should not be treated as a production incident-management system without additional security, reliability, access-control, observability, and validation mechanisms.
 
-⸻
+
 
 The Vision
 

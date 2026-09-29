@@ -12,15 +12,8 @@ HINDSIGHT_BASE_URL = os.getenv(
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
-LLM_MODEL = os.getenv(
-    "LLM_MODEL",
-    "gpt-oss-120b"
-)
-
-FALLBACK_MODEL = os.getenv(
-    "FALLBACK_MODEL",
-    "qwen3-32b"
-)
+LLM_MODEL = os.getenv("LLM_MODEL", "openai/gpt-oss-120b")
+FALLBACK_MODEL = os.getenv("FALLBACK_MODEL", "openai/gpt-oss-20b")
 
 BANK_ID = os.getenv(
     "BANK_ID",

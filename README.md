@@ -359,9 +359,6 @@ The dataset is designed to demonstrate:
 * Failed fixes
 * Operational lessons
 
-The data is synthetic and intended for hackathon demonstration purposes.
-
-
 
  Example
 
@@ -467,9 +464,6 @@ GROQ_API_KEY=your_groq_api_key
 LLM_MODEL=gpt-oss-120b
 FALLBACK_MODEL=qwen3-32b
 BANK_ID=incidentmind-team
-
-Never commit your real API keys or .env file to GitHub.
-
 
 
 Seed Historical Memory
@@ -603,11 +597,7 @@ Allow IncidentMind to remember useful engineer-specific operational preferences.
 
 Expanded Operational Analytics
 
-Track incident trends, recurring services, resolution times, and failure patterns.
-
-
-
-Hackathon Concept
+Track incident trends, recurring services, resolution times, and failure pattern.
 
 IncidentMind demonstrates how an AI agent can combine:
 
